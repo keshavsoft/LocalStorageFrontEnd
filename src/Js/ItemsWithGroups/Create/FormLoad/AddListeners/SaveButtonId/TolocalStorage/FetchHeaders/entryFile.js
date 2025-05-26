@@ -1,7 +1,8 @@
-import KeysJson from './keys.json' with { type: 'json' };
+import ConfigJson from '../../../../../config.json' with {type: 'json'};
 
 let StartFunc = () => {
     let jVarLocalForm = document.getElementById("FormId");
+    let LocalTableName = ConfigJson.TableName;
 
     const serializedData = jFLocalSerializeFormData(jVarLocalForm);
     const upperCasedData = {};
@@ -10,9 +11,16 @@ let StartFunc = () => {
         upperCasedData[key.toUpperCase()] = serializedData[key];
     }
 
-    KeysJson.body = JSON.stringify(upperCasedData);
+    let LocalData = localStorage.getItem("FormData");
+    if (LocalData) {
+        const parsedData = JSON.parse(LocalData);
+        parsedData.push(upperCasedData);
+        localStorage.setItem(LocalTableName, JSON.stringify(parsedData));
+    } else {
+        localStorage.setItem(LocalTableName, JSON.stringify([upperCasedData]));
+    }
 
-    return KeysJson;
+    return true;
 };
 
 function jFLocalSerializeFormData(form) {
