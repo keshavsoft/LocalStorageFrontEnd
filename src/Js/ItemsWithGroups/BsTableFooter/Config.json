@@ -1,0 +1,4 @@
+{
+    "PostEndPoint": "/V1/ItemsWithGroups/Insert/InsertWithPk",
+    "GetEndPoint": "/V1/ItemsWithGroups/Read/AsIs"
+}

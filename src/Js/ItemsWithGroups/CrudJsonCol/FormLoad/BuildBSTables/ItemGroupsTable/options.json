@@ -1,0 +1,21 @@
+{
+    "columns": [
+        {
+            "field": "KS-Serial",
+            "title": "#",
+            "formatter": "jFLocalSerialColumn"
+        },
+        {
+            "field": "ITEMNAME",
+            "title": "Item Name"
+        },
+        {
+            "field": "ITEMCATEGORY",
+            "title": "Item Category"
+        },
+        {
+            "field": "ITEMGROUP",
+            "title": "Item Group"
+        }
+    ]
+}

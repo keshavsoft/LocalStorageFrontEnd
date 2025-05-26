@@ -1,0 +1,20 @@
+{
+    "columns": [
+        {
+            "title": "Item Name",
+            "field": "ITEMNAME"
+        },
+        {
+            "title": "ITEMCATEGORY",
+            "field": "ITEMCATEGORY"
+        },
+        {
+            "title": "ITEMGROUP",
+            "field": "ITEMGROUP"
+        },
+        {
+            "title": "Options",
+            "footerFormatter": "Button:Save"
+        }
+    ]
+}

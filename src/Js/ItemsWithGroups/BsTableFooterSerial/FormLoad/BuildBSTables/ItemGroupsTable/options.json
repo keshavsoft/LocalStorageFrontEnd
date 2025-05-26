@@ -1,0 +1,25 @@
+{
+    "columns": [
+        {
+            "title": "#",
+            "formatter": "Number:Serial"
+        },
+        {
+            "title": "Item Name",
+            "field": "ITEMNAME"
+        },
+        {
+            "title": "ITEMCATEGORY",
+            "field": "ITEMCATEGORY"
+        },
+        {
+            "title": "ITEMGROUP",
+            "field": "ITEMGROUP"
+        },
+        {
+            "title": "Options",
+            "formatter": "actions",
+            "footerFormatter": "Button:Save"
+        }
+    ]
+}
