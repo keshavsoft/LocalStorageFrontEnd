@@ -2,15 +2,14 @@ import { StartFunc as Status200 } from "./status200.js";
 import { StartFunc as Status500 } from "./status500.js";
 
 let StartFunc = async ({ inResponse }) => {
-    let jVarLocalResponse = await inResponse;
+    let jVarLocalResponse = inResponse;
 
-    if (jVarLocalResponse === true) {
-        Status200({ inResponse: jVarLocalResponse });
+    if (jVarLocalResponse.KTF === true) {
+        Status200({ inRowPk: jVarLocalResponse.pk });
     };
 
-    if (jVarLocalResponse === false) {
-        let jVarLocalSavedPk = await jVarLocalResponse.text();
-        Status500({ inResponse: jVarLocalSavedPk });
+    if (jVarLocalResponse.KTF === false) {
+        Status500({ inResponse: jVarLocalResponse.pk });
     };
 };
 
