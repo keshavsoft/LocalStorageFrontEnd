@@ -8,7 +8,7 @@ let StartFunc = async ({ inResponse }) => {
         Status200({ inResponseAsJson: jVarLocalResponse });
     };
 
-    if (jVarLocalResponse) {
+    if (!jVarLocalResponse) {
         Status409({ inResponse: jVarLocalResponse });
     };
 };
