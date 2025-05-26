@@ -1,4 +1,3 @@
-import KeysJson from './keys.json' with { type: 'json' };
 
 let StartFunc = () => {
     let jVarLocalForm = document.getElementById("FormId");
@@ -10,9 +9,7 @@ let StartFunc = () => {
         upperCasedData[key.toUpperCase()] = serializedData[key];
     }
 
-    KeysJson.body = JSON.stringify(upperCasedData);
-
-    return KeysJson;
+    return upperCasedData;
 };
 
 function jFLocalSerializeFormData(form) {

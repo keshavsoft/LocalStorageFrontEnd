@@ -4,7 +4,7 @@ import { StartFunc as StartFuncAfterFetch } from "./AfterFetch/entryFile.js";
 let StartFunc = async ({ inRowPk }) => {
     let jVarLocalFetchResponse = await StartFuncFetchFuncs({ inRowPk });
 
-    if (jVarLocalFetchResponse.status === 200) {
+    if (jVarLocalFetchResponse === true) {
         StartFuncAfterFetch();
     };
 };

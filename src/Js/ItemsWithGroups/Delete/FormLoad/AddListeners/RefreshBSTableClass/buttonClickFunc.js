@@ -1,4 +1,4 @@
-import { StartFunc as StartFuncFetchAsGet } from "./FetchAsGet/entryFile.js";
+import { StartFunc as StartFuncFetchAsGet } from "./FromLocalStorage/entryFile.js";
 
 let StartFunc = async () => {
     StartFuncFetchAsGet().then((inData) => { });
