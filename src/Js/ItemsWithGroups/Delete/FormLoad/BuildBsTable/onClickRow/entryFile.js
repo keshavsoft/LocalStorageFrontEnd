@@ -1,6 +1,8 @@
 import { StartFunc as FetchDelete } from "./FetchDelete/entry.js";
 
 const StartFunc = async (row, $element, field) => {
+    console.log(row);
+    
     if (field === "Delete") {
         let jVarLocalFromSwal = await Swal.fire({
             title: "Are you sure?",

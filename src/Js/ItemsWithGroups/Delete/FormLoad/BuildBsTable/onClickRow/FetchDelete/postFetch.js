@@ -1,15 +1,20 @@
-import { StartFunc as StartFuncFetchHeaders } from "./FetchHeaders/entryFile.js";
-import UrlJson from "../../../../config.json" with { type: "json" };
+import ConfigJson from '../../../../config.json' with {type: 'json'};
 
 let StartFunc = async ({ inRowPk }) => {
-    let LocalroutePath = UrlJson.DeleteUrl;
+    
+    let jVarLocalFetchUrl = ConfigJson.TableName;
 
-    let jVarLocalFetchHeaders = StartFuncFetchHeaders();
-    let jVarLocalFetchUrl = `${LocalroutePath}/${inRowPk}`;
-    let response = await fetch(jVarLocalFetchUrl, jVarLocalFetchHeaders);
+    let getData = localStorage.getItem(jVarLocalFetchUrl);
 
-    return await response;
+    let parsedData = JSON.parse(getData);
+
+    const LocalFindIndex = parsedData.findIndex(e => e.pk === parseInt(inRowPk));
+
+    parsedData.splice(LocalFindIndex, 1);
+    
+    localStorage.setItem(jVarLocalFetchUrl, JSON.stringify(parsedData));
+
+    return true;
 };
 
 export { StartFunc };
-
