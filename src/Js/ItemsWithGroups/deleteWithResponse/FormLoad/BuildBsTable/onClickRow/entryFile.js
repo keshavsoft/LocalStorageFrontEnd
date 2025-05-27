@@ -1,0 +1,36 @@
+import { StartFunc as FetchDelete } from "./FetchDelete/entry.js";
+
+const StartFunc = async (row, $element, field) => {
+    console.log(row);
+    
+    if (field === "Delete") {
+        let jVarLocalFromSwal = await Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "grey",
+            confirmButtonText: "Yes, delete it!",
+            reverseButtons: true,
+            focusCancel: true,
+            cancelButtonText: "Cancel"
+        });
+
+        if (jVarLocalFromSwal.isConfirmed) {
+            if ("pk" in row) {
+                let deleteResult = await FetchDelete({ inRowPk: row.pk });
+
+                await Swal.fire({
+                    title: "Deleted!",
+                    text: "The item has been deleted.",
+                    icon: "success",
+                    confirmButtonColor: "#3085d6",
+                    confirmButtonText: "OK"
+                });
+            }
+        }
+    }
+};
+
+export { StartFunc };
