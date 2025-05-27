@@ -1,44 +1,48 @@
-import ConfigJson from '../../../../config.json' with {type: 'json'};
+import ConfigJson from '../../../../config.json' with { type: 'json' };
 import { StartFunc as StartFuncFetchHeaders } from "./FetchHeaders/entryFile.js";
 
 let StartFunc = async () => {
     let LocalTableName = ConfigJson.TableName;
     let jVarLocalFetchHeaders = StartFuncFetchHeaders();
+
     let LocalReturnData = { KTF: false };
+
+    let jVarLocalQueryParams = getUrlQueryParams({ inGetKey: "pk" });
+
     let LocalData = localStorage.getItem(LocalTableName);
 
     if (!LocalData) {
-        let LocalRes = jfLocalNewDataInsert({ inData: jVarLocalFetchHeaders, inTable: LocalTableName });
-        LocalReturnData.KTF = true;
-        LocalReturnData.pk = LocalRes;
-        return LocalReturnData
+        LocalReturnData.Reason = "No data available to update";
+        return LocalReturnData;
+    }
+
+    let parsedData = JSON.parse(LocalData);
+
+    let rowIndex = parsedData.findIndex(item => item.pk == jVarLocalQueryParams);
+
+    if (rowIndex === -1) {
+        LocalReturnData.Reason = "Record with provided pk not found";
+        return LocalReturnData;
+    }
+
+    parsedData[rowIndex] = {
+        ...parsedData[rowIndex],
+        ...jVarLocalFetchHeaders,
+        DateTime: new Date()
     };
 
-    let LocalRes = jfLocalUpdata({ inTable: LocalTableName, inData: LocalData, inUpdateData: jVarLocalFetchHeaders });
+    localStorage.setItem(LocalTableName, JSON.stringify(parsedData));
+
     LocalReturnData.KTF = true;
-    LocalReturnData.pk = LocalRes;
-    return LocalReturnData
+    LocalReturnData.pk = jVarLocalFetchHeaders.pk;
+
+    return LocalReturnData;
 };
 
-const jfLocalNewDataInsert = ({ inData, inTable }) => {
-    let LocalnewData = { ...inData, pk: 1, DateTime: new Date() };
-    localStorage.setItem(inTable, JSON.stringify([LocalnewData]));
-
-    return LocalnewData.pk;
+let getUrlQueryParams = ({ inGetKey }) => {
+    const queryString = window.location.search;
+    const parameters = new URLSearchParams(queryString);
+    const value = parameters.get(inGetKey);
+    return value;
 };
-
-const jfLocalUpdata = ({ inTable, inData, inUpdateData }) => {
-    const parsedData = JSON.parse(inData);
-    let LocalPk = parsedData.map(ele => ele.pk);
-    let MaxPk = Math.max(...LocalPk) + 1;
-    let LocalnewData = { ...inUpdateData, pk: MaxPk, DateTime: new Date() };
-
-    parsedData.push(LocalnewData);
-    localStorage.setItem(inTable, JSON.stringify(parsedData));
-    return MaxPk
-};
-
-
-
 export { StartFunc };
-
