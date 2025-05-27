@@ -1,0 +1,149 @@
+<!--
+
+=========================================================
+* Volt Free - Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
+
+* Designed and coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./ItemsWithGroups/_head.html', {
+    "path": "../..",
+    "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
+    })
+</head>
+
+<body>
+    @@include('./ItemsWithGroups/_nav.html', {
+    "path": "../.."
+    })
+
+    @@include('./ItemsWithGroups/_sidenav.html', {
+    "path": "../..",
+    "page": "Create",
+    "page_group":"AddOns"
+    })
+
+    <main class="content">
+
+        @@include('./ItemsWithGroups/_topbar.html', {
+        "path": "../.."
+        })
+        <div class="container mt-5">
+            <div class="card">
+                <div class="card-body">
+                    <form onsubmit="return false" id="FormId">
+                <div class="row ColumnsRow">
+                    <div class="col-md-12">
+                        <label class="col-md-4 col-form-label">Customer Name</label>
+                        <div class="col-md-8">
+                            <input name="CustomerName" type="text" class="form-control" autocomplete="off" list="CustomerNameDataListId" required oninput="this.value = this.value.replace(/[^a-zA-Z0-9\s]/g, '')"
+                                autofocus>
+                                <datalist id="CustomerNameDataListId">
+                                </datalist>
+                            <div class="invalid-feedback">
+                                CustomerName Should not be empty!!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label class="col-md-4 col-form-label">Mobile</label>
+
+                        <div class="col-md-8">
+
+                            <input name="Mobile" type="number" class="form-control" autocomplete="off" id="MobileNumberId" list="MobileNumberDataListId" required oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)">
+                            <datalist id="MobileNumberDataListId">
+                            </datalist>
+                            <div class="invalid-feedback" id="MobileClass">
+                                Mobile Should not be empty!!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="col-md-4 col-form-label">DOB</label>
+                        <div class="col-md-8">
+                            <input name="DOB" type="date" id="dob" class="form-control" autocomplete="off">
+                            <div class="invalid-feedback">
+                                DOB Should not be empty!!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="col-md-4 col-form-label">GSTNumber</label>
+                        <div class="col-md-8">
+                            <input name="GSTNumber" type="text" class="form-control" autocomplete="off">
+                            <div class="invalid-feedback">
+                                GSTNumber Should not be empty!!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="col-md-4 col-form-label">Location</label>
+                        <div class="col-md-8">
+                            <input name="City" type="text" class="form-control" autocomplete="off">
+                            <div class="invalid-feedback">
+                                Location Should not be empty!!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="col-md-4 col-form-label">Occupation</label>
+                        <div class="col-md-8">
+                            <input name="Occupation" type="text" class="form-control" autocomplete="off">
+                            <div class="invalid-feedback">
+                                Occupation Should not be empty!!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="col-md-4 col-form-label">CompanyName</label>
+                        <div class="col-md-8">
+                            <input name="CompanyName" type="text" class="form-control" autocomplete="off">
+                            <div class="invalid-feedback">
+                                CompanyName Should not be empty!!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-sm-10">
+                        <button id="SaveButtonId" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </form>
+                    <!-- <div id="responseAlert" class="alert alert-info alert-dismissible fade show d-none mt-3"
+                        role="alert">
+                        <span class="alert-message"></span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        @@include('./ItemsWithGroups/_footer.html', {
+        "path": "../..",
+        "classes": "bg-gray-800 text-white"
+        })
+    </main>
+
+    @@include('./ItemsWithGroups/_scripts.html', {
+    "path": "../.."
+    })
+
+    <script type="module" src="../../Js/ItemsWithGroups/CustomersCreate/startFunc.js"></script>
+</body>
+
+</html>
