@@ -1,29 +1,8 @@
-import UrlJson from './url.json' with {type: 'json'};
-
-let StartFunc = ({ inRowPk }) => {
-    let LocalRowPk = inRowPk;
-
-    if (LocalFuncForSingleTable({ inRowPk: LocalRowPk }) === false) {
-        LocalFuncForAllTables({ inRowPk: LocalRowPk });
-    };
+let StartFunc = ({ inResponse }) => {
+    const url = new URL(window.location.href);
+    let NewURl = new URL("./show.html", url);
+    const new_url = new URL(`${NewURl.href}`);
+    window.location.href = new_url.href;
 };
 
-const LocalFuncForSingleTable = ({ inRowPk }) => {
-    let LocalRowPk = inRowPk;
-
-    if (window.location.pathname.endsWith(`/${UrlJson.PresentUrl}`)) {
-        window.location.href = `${UrlJson.RedirectToUrl}?inRowPk=${LocalRowPk}`;
-        return true;
-    };
-
-    return false;
-};
-
-const LocalFuncForAllTables = ({ inRowPk }) => {
-    let LocalRowPk = inRowPk;
-
-    window.location.href = `${jVarGlobalTableName}${UrlJson.RedirectToUrl}?inRowPk=${LocalRowPk}`;
-};
-
-
-export { StartFunc }
+export { StartFunc };
