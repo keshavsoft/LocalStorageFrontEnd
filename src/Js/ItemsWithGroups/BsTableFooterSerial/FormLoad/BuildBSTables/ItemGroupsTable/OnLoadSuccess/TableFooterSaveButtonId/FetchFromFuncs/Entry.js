@@ -3,8 +3,8 @@ import { StartFunc as StartFuncAfterFetch } from "./AfterFetch/EntryFile.js";
 
 let StartFunc = async (event) => {
     let jVarLocalDataNeeded = await StartFuncFetchFuncs(event);
-   
-    if (jVarLocalDataNeeded.status === 200) {
+
+    if (jVarLocalDataNeeded === true) {
         StartFuncAfterFetch();
     };
 };
