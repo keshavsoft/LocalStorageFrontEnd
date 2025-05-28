@@ -1,6 +1,6 @@
 let StartFunc = ({ inResponse }) => {
     Swal.fire({
-        text: `No Data`,
+        text: `${inResponse}`,
         icon: "error",
         title: "check"
     });

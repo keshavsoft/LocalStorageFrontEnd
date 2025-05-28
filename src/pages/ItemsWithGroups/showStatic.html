@@ -32,7 +32,7 @@
 
     @@include('./ItemsWithGroups/_sidenav.html', {
     "path": "../..",
-    "page": "WithResponse",
+    "page": "WithStatic",
     "page_group":"Show"
     })
 
@@ -59,6 +59,14 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table id="table" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th data-formatter="jFLocalSerialColumn" data-width="50">#</th>
+                                    <th data-field="ITEMNAME" data-width="350">ItemName</th>
+                                    <th data-field="ITEMCATEGORY" data-width="200">ItemCategory</th>
+                                    <th data-field="ITEMGROUP" data-width="200">ItemGroup</th>
+                                </tr>
+                            </thead>
                         </table>
                     </div>
                 </div>
@@ -74,7 +82,12 @@
     @@include('./ItemsWithGroups/_scripts.html', {
     "path": "../.."
     })
-    <script type="module" src="../../Js/ItemsWithGroups/WithResponse/entryFile.js"></script>
+     <script>
+        function jFLocalSerialColumn(value, row, index) {
+            return index + 1;
+        };
+    </script>
+    <script type="module" src="../../Js/ItemsWithGroups/StaticShow/entryFile.js"></script>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 import { StartFunc as StartFuncFetchFuncs } from './fetchFuncs.js';
-import { StartFunc as afterFetch } from './afterFetch/entryFile.js';
+import { StartFunc as afterFetch } from './AfterFetch/entryFile.js';
 
-const StartFunc = async () => {
+const StartFunc = async() => {
     let localResponse = await StartFuncFetchFuncs();
 
     afterFetch({ inResponse: localResponse });
