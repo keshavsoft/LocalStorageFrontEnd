@@ -16,7 +16,7 @@ const StartFunc = async (row, $element, field) => {
             focusCancel: true,
             cancelButtonText: "Cancel"
         });
-
+  
         if (jVarLocalFromSwal.isConfirmed) {
             if ("pk" in row) {
                 let deleteResult = await FetchDelete({ inRowPk: row.pk });
