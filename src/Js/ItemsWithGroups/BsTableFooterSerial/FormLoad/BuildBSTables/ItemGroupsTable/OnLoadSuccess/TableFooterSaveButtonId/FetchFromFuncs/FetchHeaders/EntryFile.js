@@ -1,9 +1,7 @@
-import KeysJson from './Keys.json' with { type: 'json' };
-import { StartFunc as StartFuncPrepareBody } from "./PrepareBody.js";
+import { StartFunc as PrepareRequestBody } from "./PrepareBody.js";
 
 let StartFunc = (event) => {
-    KeysJson.body = JSON.stringify(StartFuncPrepareBody(event));
-    return KeysJson;
+    return PrepareRequestBody(event); 
 };
 
 export { StartFunc };
