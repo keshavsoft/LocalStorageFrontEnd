@@ -14,8 +14,8 @@
             "formatter": "jFLocalSerialColumn"
         },
        {
-            "field": "ITEMCATEGORY",
-            "title": "Item Category"
+            "field": "ITEMGROUP",
+            "title": "Item Group"
         }
     ]
 }
