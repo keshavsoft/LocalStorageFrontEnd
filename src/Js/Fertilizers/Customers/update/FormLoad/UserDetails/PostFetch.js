@@ -1,4 +1,4 @@
-import ConfigJson from '../../../../config.json' with {type: 'json'};
+import ConfigJson from '../../config.json' with {type: 'json'};
 
 let fetchDataFromLocalStorage = async () => {
     let queryPk = getUrlQueryParams({ inGetKey: "pk" });
