@@ -1,0 +1,98 @@
+<!--
+
+=========================================================
+* Volt Free - Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
+
+* Designed and coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./Fertilizers/_head.html', {
+    "path": "../../..",
+    "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
+    })
+</head>
+
+<body>
+    @@include('./Fertilizers/_nav.html', {
+    "path": "../../.."
+    })
+
+    @@include('./Fertilizers/_sidenav.html', {
+    "path": "../../..",
+    "page": "update",
+    "page_group":"ItemNames"
+    })
+
+    <main class="content">
+
+        @@include('./Fertilizers/_topbar.html', {
+        "path": "../../.."
+        })
+
+
+
+        <div class="container mt-5">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item"><a href="#">Fertilizers</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">update</li>
+                </ol>
+            </nav>
+            <div class="card">
+                <div class="card-body">
+                    <form onsubmit="return false" id="FormId">
+                        <div class="row ColumnsRow">
+                            <div class="col-md-12">
+                                <label class="col-md-4 col-form-label">ItemName</label>
+                                <div class="col-md-8">
+                                    <input name="ItemName" type="text" class="form-control" id="ItemName"
+                                        autocomplete="off" list="ItemNameDataListId" required autofocus>
+                                    <datalist id="ItemNameDataListId">
+                                        <div class="invalid-feedback">
+                                            ItemName Should not be empty!!
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm-10">
+                                <button id="SaveButtonId" class="btn btn-primary">Alter</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- <div id="responseAlert" class="alert alert-info alert-dismissible fade show d-none mt-3"
+                        role="alert">
+                        <span class="alert-message"></span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        @@include('./Fertilizers/_footer.html', {
+        "path": "../../..",
+        "classes": "bg-gray-800 text-white"
+        })
+    </main>
+
+    @@include('./Fertilizers/_scripts.html', {
+    "path": "../../.."
+    })
+    <script type="module" src="../../../Js/Fertilizers/ItemNames/update/startFunc.js"></script>
+</body>
+
+</html>
