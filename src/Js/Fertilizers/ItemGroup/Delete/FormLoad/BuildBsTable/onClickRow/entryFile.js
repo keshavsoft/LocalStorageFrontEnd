@@ -19,9 +19,17 @@ const StartFunc = async (row, $element, field) => {
 
         if (jVarLocalFromSwal.isConfirmed) {
             if ("pk" in row) {
-                await FetchDelete({ inRowPk: row.pk });
-            };
-        };
+                let deleteResult = await FetchDelete({ inRowPk: row.pk });
+
+                await Swal.fire({
+                    title: "Deleted!",
+                    text: "The item has been deleted.",
+                    icon: "success",
+                    confirmButtonColor: "#3085d6",
+                    confirmButtonText: "OK"
+                });
+            }
+        }
     };
 };
 
