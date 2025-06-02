@@ -20,7 +20,7 @@
 
 <head>
     @@include('./Fertilizers/_head.html', {
-    "path": "../../..",
+    "path": "../../../..",
     "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
     })
 </head>
@@ -31,9 +31,9 @@
     })
 
     @@include('./Fertilizers/_sidenav.html', {
-    "path": "../../..",
+    "path": "../../../..",
     "page": "update",
-    "page_group":"ItemCategory"
+    "page_group":"ItemNames"
     })
 
     <main class="content">
@@ -57,19 +57,20 @@
                     <form onsubmit="return false" id="FormId">
                         <div class="row ColumnsRow">
                             <div class="col-md-12">
-                                <label class="col-md-4 col-form-label">ItemCategory</label>
+                                <label class="col-md-4 col-form-label">ItemName</label>
                                 <div class="col-md-8">
-                                    <input name="ItemCategory" id="ItemCategory" type="text" class="form-control"
-                                        autocomplete="off" required autofocus>
-                                    <div class="invalid-feedback">
-                                        ItemCategory Should not be empty!!
-                                    </div>
+                                    <input name="ItemName" type="text" class="form-control" id="ItemName"
+                                        autocomplete="off" list="ItemNameDataListId" required autofocus>
+                                    <datalist id="ItemNameDataListId">
+                                        <div class="invalid-feedback">
+                                            ItemName Should not be empty!!
+                                        </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-sm-10">
-                                <button id="SaveButtonId" class="btn btn-primary">Save</button>
+                                <button id="SaveButtonId" class="btn btn-primary">Alter</button>
                             </div>
                         </div>
                     </form>
@@ -83,7 +84,7 @@
         </div>
 
         @@include('./Fertilizers/_footer.html', {
-        "path": "../../..",
+        "path": "../../../..",
         "classes": "bg-gray-800 text-white"
         })
     </main>
@@ -91,7 +92,7 @@
     @@include('./Fertilizers/_scripts.html', {
     "path": "../../.."
     })
-    <script type="module" src="../../../Js/Fertilizers/ItemCategory/update/startFunc.js"></script>
+    <script type="module" src="../../../Js/Fertilizers/Masters/ItemNames/update/startFunc.js"></script>
 </body>
 
 </html>
