@@ -55,7 +55,7 @@
                 </a>
             </li>
             <li class="nav-item @@if (context.page === 'index') { active }">
-                <a href="@@path/pages/Masters/MastersAddOns/maindex.html" class="nav-link">
+                <a href="@@path/pages/Fertilizers/Masters/index.html" class="nav-link">
                     <span class="sidebar-icon text-danger">
                         <i class="bi bi-speedometer2"></i>
                     </span>
@@ -65,71 +65,11 @@
 
             <li class="nav-item">
                 <span
-                    class="nav-link @@if (context.page_group !== 'ItemNames') { collapsed } d-flex justify-content-between align-items-center"
-                    data-bs-toggle="collapse" data-bs-target="#submenu-ItemNames">
-                    <span>
-                        <span class="sidebar-icon text-success">
-                            <i class="bi bi-person-plus-fill"></i>
-                        </span>
-                        <span class="sidebar-text">ItemNames</span>
-                    </span>
-                    <span class="link-arrow">
-                        <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </span>
-                </span>
-
-                <div class="multi-level collapse @@if (context.page_group === 'ItemNames') { show }" role="list"
-                    id="submenu-ItemNames" aria-expanded="false">
-                    <ul class="flex-column nav">
-
-                        <li class="nav-item @@if (context.page === 'create') { active }">
-                            <a class="nav-link d-flex align-items-center"
-                                href="@@path/pages/Fertilizers/ItemNames/create.html">
-                                <i class="bi bi-plus-circle-fill me-2 text-primary"></i>
-                                <span class="sidebar-text">Create</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item @@if (context.page === 'show') { active }">
-                            <a class="nav-link d-flex align-items-center"
-                                href="@@path/pages/Fertilizers/ItemNames/show.html">
-                                <i class="bi bi-eye-fill me-2 text-info"></i>
-                                <span class="sidebar-text">Show</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item @@if (context.page === 'alter') { active }">
-                            <a class="nav-link d-flex align-items-center"
-                                href="@@path/pages/Fertilizers/ItemNames/alter.html">
-                                <i class="bi bi-pencil-square me-2 text-warning"></i>
-                                <span class="sidebar-text">Alter</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item @@if (context.page === 'delete') { active }">
-                            <a class="nav-link d-flex align-items-center"
-                                href="@@path/pages/Fertilizers/ItemNames/delete.html">
-                                <i class="bi bi-trash-fill me-2 text-danger"></i>
-                                <span class="sidebar-text">Delete</span>
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-            </li>
-
-            <li class="nav-item">
-                <span
                     class="nav-link @@if (context.page_group !== 'Customers') { collapsed } d-flex justify-content-between align-items-center"
                     data-bs-toggle="collapse" data-bs-target="#submenu-Customers">
                     <span>
                         <span class="sidebar-icon text-success">
-                            <i class="bi bi-person-plus-fill"></i>
+                            <i class="bi bi-people-fill"></i> 
                         </span>
                         <span class="sidebar-text">Customers</span>
                     </span>
@@ -149,7 +89,7 @@
 
                         <li class="nav-item @@if (context.page === 'create') { active }">
                             <a class="nav-link d-flex align-items-center"
-                                href="@@path/pages/Fertilizers/Customers/create.html">
+                                href="@@path/pages/Fertilizers/Masters/Customers/create.html">
                                 <i class="bi bi-plus-circle-fill me-2 text-primary"></i>
                                 <span class="sidebar-text">Create</span>
                             </a>
@@ -157,7 +97,7 @@
 
                         <li class="nav-item @@if (context.page === 'show') { active }">
                             <a class="nav-link d-flex align-items-center"
-                                href="@@path/pages/Fertilizers/Customers/show.html">
+                                href="@@path/pages/Fertilizers/Masters/Customers/show.html">
                                 <i class="bi bi-eye-fill me-2 text-info"></i>
                                 <span class="sidebar-text">Show</span>
                             </a>
@@ -165,7 +105,7 @@
 
                         <li class="nav-item @@if (context.page === 'alter') { active }">
                             <a class="nav-link d-flex align-items-center"
-                                href="@@path/pages/Fertilizers/Customers/alter.html">
+                                href="@@path/pages/Fertilizers/Masters/Customers/alter.html">
                                 <i class="bi bi-pencil-square me-2 text-warning"></i>
                                 <span class="sidebar-text">Alter</span>
                             </a>
@@ -173,7 +113,7 @@
 
                         <li class="nav-item @@if (context.page === 'delete') { active }">
                             <a class="nav-link d-flex align-items-center"
-                                href="@@path/pages/Fertilizers/Customers/delete.html">
+                                href="@@path/pages/Fertilizers/Masters/Customers/delete.html">
                                 <i class="bi bi-trash-fill me-2 text-danger"></i>
                                 <span class="sidebar-text">Delete</span>
                             </a>
@@ -184,24 +124,86 @@
             </li>
 
             <li class="nav-item">
-                <span
-                    class="nav-link @@if (context.page_group !== 'ItemCategory') { collapsed } d-flex justify-content-between align-items-center"
-                    data-bs-toggle="collapse" data-bs-target="#submenu-ItemCategory">
-                    <span>
-                        <span class="sidebar-icon text-success">
-                            <i class="bi bi-person-plus-fill"></i>
-                        </span>
-                        <span class="sidebar-text">ItemCategory</span>
-                    </span>
-                    <span class="link-arrow">
-                        <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </span>
-                </span>
+    <span
+        class="nav-link @@if (context.page_group !== 'ItemNames') { collapsed } d-flex justify-content-between align-items-center"
+        data-bs-toggle="collapse" data-bs-target="#submenu-ItemNames">
+        <span>
+            <span class="sidebar-icon" style="color: #FFD1A4;"> 
+                <i class="bi bi-box-seam"></i>
+            </span>
+            <span class="sidebar-text text-white">ItemNames</span> 
+        </span>
+        <span class="link-arrow">
+            <svg class="icon icon-sm text-white" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"></path>
+            </svg>
+        </span>
+    </span>
+</li>
+
+
+    <div class="multi-level collapse @@if (context.page_group === 'ItemNames') { show }" role="list"
+        id="submenu-ItemNames" aria-expanded="false">
+        <ul class="flex-column nav">
+
+                        <li class="nav-item @@if (context.page === 'create') { active }">
+                            <a class="nav-link d-flex align-items-center"
+                                href="@@path/pages/Fertilizers/Masters/ItemNames/create.html">
+                                <i class="bi bi-plus-circle-fill me-2 text-primary"></i>
+                                <span class="sidebar-text">Create</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item @@if (context.page === 'show') { active }">
+                            <a class="nav-link d-flex align-items-center"
+                                href="@@path/pages/Fertilizers/Masters/ItemNames/show.html">
+                                <i class="bi bi-eye-fill me-2 text-info"></i>
+                                <span class="sidebar-text">Show</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item @@if (context.page === 'alter') { active }">
+                            <a class="nav-link d-flex align-items-center"
+                                href="@@path/pages/Fertilizers/Masters/ItemNames/alter.html">
+                                <i class="bi bi-pencil-square me-2 text-warning"></i>
+                                <span class="sidebar-text">Alter</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item @@if (context.page === 'delete') { active }">
+                            <a class="nav-link d-flex align-items-center"
+                                href="@@path/pages/Fertilizers/Masters/ItemNames/delete.html">
+                                <i class="bi bi-trash-fill me-2 text-danger"></i>
+                                <span class="sidebar-text">Delete</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
+
+            <li class="nav-item">
+    <span
+        class="nav-link @@if (context.page_group !== 'ItemCategory') { collapsed } d-flex justify-content-between align-items-center"
+        data-bs-toggle="collapse" data-bs-target="#submenu-ItemCategory">
+        <span>
+            <span class="sidebar-icon" style="color: #f4b183;"> 
+                <i class="bi bi-tags-fill"></i>
+            </span>
+            <span class="sidebar-text">ItemCategory</span>
+        </span>
+        <span class="link-arrow">
+            <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"></path>
+            </svg>
+        </span>
+    </span>
 
                 <div class="multi-level collapse @@if (context.page_group === 'ItemCategory') { show }" role="list"
                     id="submenu-ItemCategory" aria-expanded="false">
@@ -209,7 +211,7 @@
 
                         <li class="nav-item @@if (context.page === 'create') { active }">
                             <a class="nav-link d-flex align-items-center"
-                                href="@@path/pages/Fertilizers/ItemCategory/create.html">
+                                href="@@path/pages/Fertilizers/Masters/ItemCategory/create.html">
                                 <i class="bi bi-plus-circle-fill me-2 text-primary"></i>
                                 <span class="sidebar-text">Create</span>
                             </a>
@@ -217,7 +219,7 @@
 
                         <li class="nav-item @@if (context.page === 'show') { active }">
                             <a class="nav-link d-flex align-items-center"
-                                href="@@path/pages/Fertilizers/ItemCategory/show.html">
+                                href="@@path/pages/Fertilizers/Masters/ItemCategory/show.html">
                                 <i class="bi bi-eye-fill me-2 text-info"></i>
                                 <span class="sidebar-text">Show</span>
                             </a>
@@ -225,7 +227,7 @@
 
                         <li class="nav-item @@if (context.page === 'alter') { active }">
                             <a class="nav-link d-flex align-items-center"
-                                href="@@path/pages/Fertilizers/ItemCategory/alter.html">
+                                href="@@path/pages/Fertilizers/Masters/ItemCategory/alter.html">
                                 <i class="bi bi-pencil-square me-2 text-warning"></i>
                                 <span class="sidebar-text">Alter</span>
                             </a>
@@ -233,7 +235,7 @@
 
                         <li class="nav-item @@if (context.page === 'delete') { active }">
                             <a class="nav-link d-flex align-items-center"
-                                href="@@path/pages/Fertilizers/ItemCategory/delete.html">
+                                href="@@path/pages/Fertilizers/Masters/ItemCategory/delete.html">
                                 <i class="bi bi-trash-fill me-2 text-danger"></i>
                                 <span class="sidebar-text">Delete</span>
                             </a>
@@ -243,24 +245,24 @@
                 </div>
             </li>
             <li class="nav-item">
-                <span
-                    class="nav-link @@if (context.page_group !== 'ItemGroup') { collapsed } d-flex justify-content-between align-items-center"
-                    data-bs-toggle="collapse" data-bs-target="#submenu-itemGroup">
-                    <span>
-                        <span class="sidebar-icon text-success">
-                            <i class="bi bi-person-plus-fill"></i>
-                        </span>
-                        <span class="sidebar-text">ItemGroup</span>
-                    </span>
-                    <span class="link-arrow">
-                        <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </span>
-                </span>
+    <span
+        class="nav-link @@if (context.page_group !== 'ItemGroup') { collapsed } d-flex justify-content-between align-items-center"
+        data-bs-toggle="collapse" data-bs-target="#submenu-itemGroup">
+        <span>
+            <span class="sidebar-icon" style="color: #A3D5FF;"> <!-- Icon color updated to pastel blue -->
+                <i class="bi bi-collection-fill"></i>
+            </span>
+            <span class="sidebar-text">ItemGroup</span>
+        </span>
+        <span class="link-arrow">
+            <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"></path>
+            </svg>
+        </span>
+    </span>
 
                 <div class="multi-level collapse @@if (context.page_group === 'ItemGroup') { show }" role="list"
                     id="submenu-itemGroup" aria-expanded="false">
@@ -268,7 +270,7 @@
 
                         <li class="nav-item @@if (context.page === 'create') { active }">
                             <a class="nav-link d-flex align-items-center"
-                                href="@@path/pages/Fertilizers/ItemGroup/create.html">
+                                href="@@path/pages/Fertilizers/Masters/ItemGroup/create.html">
                                 <i class="bi bi-plus-circle-fill me-2 text-primary"></i>
                                 <span class="sidebar-text">Create</span>
                             </a>
@@ -276,7 +278,7 @@
 
                         <li class="nav-item @@if (context.page === 'show') { active }">
                             <a class="nav-link d-flex align-items-center"
-                                href="@@path/pages/Fertilizers/ItemGroup/show.html">
+                                href="@@path/pages/Fertilizers/Masters/ItemGroup/show.html">
                                 <i class="bi bi-eye-fill me-2 text-info"></i>
                                 <span class="sidebar-text">Show</span>
                             </a>
@@ -284,7 +286,7 @@
 
                         <li class="nav-item @@if (context.page === 'alter') { active }">
                             <a class="nav-link d-flex align-items-center"
-                                href="@@path/pages/Fertilizers/ItemGroup/alter.html">
+                                href="@@path/pages/Fertilizers/Masters/ItemGroup/alter.html">
                                 <i class="bi bi-pencil-square me-2 text-warning"></i>
                                 <span class="sidebar-text">Alter</span>
                             </a>
@@ -292,7 +294,7 @@
 
                         <li class="nav-item @@if (context.page === 'delete') { active }">
                             <a class="nav-link d-flex align-items-center"
-                                href="@@path/pages/Fertilizers/ItemGroup/delete.html">
+                                href="@@path/pages/Fertilizers/Masters/ItemGroup/delete.html">
                                 <i class="bi bi-trash-fill me-2 text-danger"></i>
                                 <span class="sidebar-text">Delete</span>
                             </a>

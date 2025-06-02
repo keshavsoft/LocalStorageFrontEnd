@@ -19,9 +19,9 @@
 <html lang="en">
 
 <head>
-    @@include('./Fertilizers/_head.html', {
-    "path": "../../..",
-    "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
+    @@include('./_headWithBSTable.html', {
+    "path": "../../../..",
+    "title": "Volt Free Bootstrap Dashboard - Bootstrap FixedCol"
     })
 </head>
 
@@ -31,9 +31,9 @@
     })
 
     @@include('./Fertilizers/_sidenav.html', {
-    "path": "../../..",
-    "page": "delete",
-    "page_group":"Customers"
+    "path": "../../../..",
+    "page": "alter",
+    "page_group":"ItemCategory"
     })
 
     <main class="content">
@@ -65,8 +65,8 @@
             </div>
         </div>
 
-        @@include('./Fertilizers/_footer.html', {
-        "path": "../../..",
+         @@include('./Fertilizers/_footer.html', {
+        "path": "../../../..",
         "classes": "bg-gray-800 text-white"
         })
     </main>
@@ -74,7 +74,7 @@
     @@include('./Fertilizers/_scripts.html', {
     "path": "../../.."
     })
-    <script type="module" src="../../../Js/Fertilizers/Customers/Delete/entryFile.js"></script>
+    <script type="module" src="../../../Js/Fertilizers/Masters/Customers/Alter/entryFile.js"></script>
 </body>
 
 </html>

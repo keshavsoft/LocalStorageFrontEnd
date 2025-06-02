@@ -20,7 +20,7 @@
 
 <head>
     @@include('./Fertilizers/_head.html', {
-    "path": "../../..",
+    "path": "../../../..",
     "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
     })
 </head>
@@ -31,8 +31,8 @@
     })
 
     @@include('./Fertilizers/_sidenav.html', {
-    "path": "../../..",
-    "page": "update",
+    "path": "../../../..",
+    "page": "create",
     "page_group":"Customers"
     })
 
@@ -41,17 +41,7 @@
         @@include('./Fertilizers/_topbar.html', {
         "path": "../../.."
         })
-
-
-
         <div class="container mt-5">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item"><a href="#">Fertilizers</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">update</li>
-                </ol>
-            </nav>
             <div class="card">
                 <div class="card-body">
                     <form onsubmit="return false" id="FormId">
@@ -147,7 +137,7 @@
         </div>
 
         @@include('./Fertilizers/_footer.html', {
-        "path": "../../..",
+        "path": "../../../..",
         "classes": "bg-gray-800 text-white"
         })
     </main>
@@ -155,7 +145,8 @@
     @@include('./Fertilizers/_scripts.html', {
     "path": "../../.."
     })
-    <script type="module" src="../../../Js/Fertilizers/Customers/update/startFunc.js"></script>
+
+    <script type="module" src="../../../Js/Fertilizers/Masters/Customers/create/startFunc.js"></script>
 </body>
 
 </html>

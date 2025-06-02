@@ -55,7 +55,7 @@
                 </a>
             </li>
             <li class="nav-item @@if (context.page === 'index') { active }">
-                <a href="@@path/pages/Masters/MastersAddOns/maindex.html" class="nav-link">
+                <a href="@@path/pages/Fertilizers/Masters/index.html" class="nav-link">
                     <span class="sidebar-icon text-danger">
                         <i class="bi bi-speedometer2"></i>
                     </span>
@@ -63,19 +63,17 @@
                 </a>
             </li>
 
-             <li class="nav-item">
-                <a href="./FrConf" class="nav-link d-flex justify-content-between">
-                    <span>
-                        <span class="sidebar-icon text-success">
-                            <i class="bi bi-gear-fill"></i>
-                        </span>
-                        <span class="sidebar-text">From Config</span>
+            <li class="nav-item @@if (context.page === 'index') { active }">
+                <a href="@@path/pages/Fertilizers/Masters/index.html" class="nav-link">
+                    <span class="sidebar-icon text-danger">
+                        <i class="bi bi-speedometer2"></i>
                     </span>
+                    <span class="sidebar-text">Masters</span>
                 </a>
             </li>
-          
+
+
 
         </ul>
-
     </div>
 </nav>

@@ -20,7 +20,7 @@
 
 <head>
     @@include('./Fertilizers/_head.html', {
-    "path": "../../..",
+    "path": "../../../..",
     "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
     })
 </head>
@@ -31,9 +31,9 @@
     })
 
     @@include('./Fertilizers/_sidenav.html', {
-    "path": "../../..",
+    "path": "../../../..",
     "page": "create",
-    "page_group":"ItemNames"
+    "page_group":"ItemGroup"
     })
 
     <main class="content">
@@ -46,15 +46,14 @@
                 <div class="card-body">
                     <form onsubmit="return false" id="FormId">
                         <div class="row ColumnsRow">
-                            <div class="col-md-12">
-                                <label class="col-md-4 col-form-label">ItemName</label>
+                           <div class="col-md-12">
+                                <label class="col-md-4 col-form-label">ItemGroup</label>
                                 <div class="col-md-8">
-                                    <input name="ItemName" type="text" class="form-control" autocomplete="off"
-                                        list="ItemNameDataListId" required autofocus>
-                                    <datalist id="ItemNameDataListId">
-                                        <div class="invalid-feedback">
-                                            ItemName Should not be empty!!
-                                        </div>
+                                    <input name="ItemGroup" id="ItemGroup" type="text" class="form-control"
+                                        autocomplete="off" required autofocus>
+                                    <div class="invalid-feedback">
+                                        ItemGroup Should not be empty!!
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +73,7 @@
         </div>
 
         @@include('./Fertilizers/_footer.html', {
-        "path": "../../..",
+        "path": "../../../..",
         "classes": "bg-gray-800 text-white"
         })
     </main>
@@ -83,7 +82,7 @@
     "path": "../../.."
     })
 
-    <script type="module" src="../../../Js/Fertilizers/ItemNames/Create/startFunc.js"></script>
+    <script type="module" src="../../../Js/Fertilizers/Masters/ItemGroup/Create/startFunc.js"></script>
 </body>
 
 </html>
