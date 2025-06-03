@@ -19,7 +19,7 @@
 <html lang="en">
 
 <head>
-    @@include('./Fertilizers/_head.html', {
+    @@include('./_headWithBSTable.html', {
     "path": "../../../..",
     "title": "Volt Free Bootstrap Dashboard - Bootstrap Tables"
     })
@@ -27,7 +27,7 @@
 
 <body>
     @@include('./Fertilizers/_nav.html', {
-    "path": "../../.."
+    "path": "../../../.."
     })
 
     @@include('./Fertilizers/_sidenav.html', {
@@ -39,7 +39,7 @@
     <main class="content">
 
         @@include('./Fertilizers/_topbar.html', {
-        "path": "../../.."
+        "path": "../../../.."
         })
         <div id="toolbar" class="">
             <a id="RefreshATagId" href="#"
@@ -72,9 +72,9 @@
     </main>
 
     @@include('./Fertilizers/_scripts.html', {
-    "path": "../../.."
+    "path": "../../../.."
     })
-    <script type="module" src="../../../Js/Fertilizers/Masters/ItemNames/Delete/entryFile.js"></script>
+    <script type="module" src="../../../../Js/Fertilizers/ItemNames/Delete/entryFile.js"></script>
 </body>
 
 </html>
